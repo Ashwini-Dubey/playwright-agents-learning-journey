@@ -92,6 +92,30 @@ Install the following before running the project:
 
 The agent workflows depend on the tools and capabilities configured in the custom agent files. Availability may depend on your editor, Copilot access and MCP setup.
 
+## Project initialization
+
+This project was initially scaffolded using the official Playwright project initializer, followed by Playwright's agent setup command for the VS Code workflow.
+
+### 1. Initialize a Playwright project
+
+```bash
+npm init playwright@latest
+```
+
+The initializer guides you through the initial Playwright project setup, including language, test directory, browser installation and optional GitHub Actions workflow configuration.
+
+### 2. Initialize Playwright agents for VS Code
+
+```bash
+npx playwright init-agents --loop=vscode
+```
+
+This command sets up the Playwright agent workflow for the VS Code loop. The generated agent configuration provides the starting point for the repository's agent-assisted test-planning, test-generation and test-healing exercises.
+
+The repository's custom agent definitions are maintained under `.github/agents/`.
+
+> These are the commands used to bootstrap the learning project. When setting up an existing clone, use the dependency installation and test commands in the next section instead of initializing the project again.
+
 ## Getting started
 
 ### 1. Clone the repository
